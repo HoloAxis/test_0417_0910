@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>トラの魅力</title>
+	<meta charset="UTF-8">
+	<title>A-Frameで3Dオブジェクトを表示する</title>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
 </head>
 <body>
-	<header>
-		<h1>トラの魅力</h1>
-	</header>
-	<main>
-		<img src="top.png" alt="トップ画像">
-		<h2>トラの特徴</h2>
-		<p>トラは、世界最大の猫科動物であり、強力な肉食動物です。独特の縞模様と、鋭い爪、牙を持っています。</p>
-		<h2>トラの生息地</h2>
-		<p>トラは、主にアジアの熱帯雨林や草原に生息しています。世界中に9種類のトラが存在し、そのうち3種類は絶滅危惧種となっています。</p>
-		<h2>トラと人間</h2>
-		<p>トラは、昔から人間とのかかわりがあります。インドでは、トラは神聖な存在とされ、信仰の対象となっています。また、トラは狩猟の対象とされ、毛皮や骨、肉などが取引されています。</p>
-	</main>
-	<footer>
-		<p>Copyright © 
-			<script type="text/javascript">
-				var d = new Date();
-				document.write(d.getFullYear());
-			</script> 
-		トラの魅力</p>
-	</footer>
+	<a-scene>
+		<a-assets>
+			<a-asset-item id="book" src="book.obj"></a-asset-item>
+		</a-assets>
+		<a-entity id="bookObj" obj-model="obj: #book"></a-entity>
+		<a-camera position="0 1.5 0">
+			<a-cursor></a-cursor>
+		</a-camera>
+	</a-scene>
 </body>
 </html>
